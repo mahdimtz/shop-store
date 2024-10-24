@@ -15,17 +15,17 @@ const ProductsGridWithPagination = () => {
   });
   return (
     <>
-    <div className="flex flex-wrap gap-5   items-center my-8 justify-center  mx-4 ">
+    <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-5 mx-4 my-5 ">
         {isPending && Array.from("123").map(item=><ProductGridSkeleton key={item}/>)}
       {data &&
         data?.data?.map((product,index) => (
          
           <Link
           key={product?.id} to={`/products/${product.id}`}
-           className="rounded-xl flex flex-col gap-3 overflow-hidden shadow-lg md:w-4/12 lg:w-3/12 w-full">
+           className="rounded-xl flex flex-col gap-3 overflow-hidden shadow-lg mx-auto">
             <img className="rounded-t-xl" loading="lazy" src={product?.images[0].replace(/^["[]+|["\]]/g)}/>
             <div className="flex flex-col flex-grow items-center ">
-            <p className="mb-5 flex flex-wrap justify-center text-gray-700">{product?.title}</p>
+            <p className="mb-5 text-center text-gray-700">{product?.title}</p>
             <p className="mb-5  text-gray-800 font-bold ">{product?.price}$</p>
             </div>
           </Link>

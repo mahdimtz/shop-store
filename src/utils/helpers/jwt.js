@@ -6,6 +6,7 @@ export const encryptJWT = async (payload) => {
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("1day")
+    
     .sign(key);
 };
 
