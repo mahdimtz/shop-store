@@ -11,7 +11,7 @@ const ProductByCategoryGrid = ({ id }) => {
   });
   return (
     <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-5 mx-4">
-        {isPending && Array.from("123456").map(item=><ProductGridSkeleton key={item}/>)}
+        {isPending && Array.from("1234").map(item=><ProductGridSkeleton key={item}/>)}
       {data &&
         data?.data.map((product,index) => (
          

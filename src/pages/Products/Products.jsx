@@ -18,7 +18,7 @@ const Products = () => {
     <>
       <Header />
 
-      <div className=" flex flex-col items-center justify-center gap-4 px-16">
+      <div className=" font-vazir flex flex-col items-center justify-center gap-4 px-16">
         {isPending && <ProductSkeleton />}
         {error && <ErrorOnFetchApi />}
         {data && (

@@ -36,12 +36,12 @@ const Dashboard = () => {
     {error && <ErrorOnFetchApi/>}
     {data && (
        
-        <div className='flex gap-5 p-5 items-center'>
+        <div className='font-vazir flex gap-5 p-5 items-center'>
         <div className='w-20'>
           <img src={data?.data?.avatar} alt="" className='rounded-full object-contain w-full' />
         </div>
         <div className='flex flex-col flex-1'>
-          <div className='text-gray-500 '><p>{data?.data?.name} خوش آمدید</p></div>
+          <div className='text-gray-500 font-bold '><p>{data?.data?.name} خوش آمدید</p></div>
         </div>
        <div>
        <button onClick={handleLogout} className='bg-red-600 rounded-md text-white px-4 py-2 flex gap-2 items-center '><LogoutIcon/><span>خروج</span></button>

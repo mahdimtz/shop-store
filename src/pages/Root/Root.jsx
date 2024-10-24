@@ -5,11 +5,11 @@ import ProductsGridWithPagination from '../../components/common/ProductsGridWith
 
 const Root = () => {
   return (
-    <>
+    <div className='font-vazir'>
     <Header/>
     <CategoriesChips/>
  <ProductsGridWithPagination/>
-    </>
+    </div>
   )
 }
 

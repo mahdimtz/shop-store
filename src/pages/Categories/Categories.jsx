@@ -17,7 +17,7 @@ const Categories = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center justify-center gap-4 mb-8">
+      <div className=" font-vazir flex flex-col items-center justify-center gap-4 mb-8">
         {isPending && <CategoryInfoSkeleton />}
         {error && <ErrorOnFetchApi />}
         {data && (

@@ -2,10 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.Toastify__toast {
+  min-width: 320px;
+}
+@layer base {
+  @font-face {
+    font-family: "vazir";
 
-
-.Toastify__toast{
-    min-width: 320px;
+    src: url(./assets/font/Vazirmatn-Medium.woff2),
+      url(./assets/font/Vazirmatn-Regular.woff2),
+      url(./assets/font/Vazirmatn-Black.woff2),
+      url(./assets/font/Vazirmatn-SemiBold.woff2),
+      url(./assets/font/Vazirmatn-Bold.woff2) ,
+      url(./assets/font/Vazirmatn-Thin.woff2),
+      url(./assets/font/Vazirmatn-Light.woff2)
+      format("woff2");
+  }
 }
 
 /* display: flex;
@@ -16,7 +28,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.5rem; */
-    img,
+img,
 video {
   max-width: 100%;
   height: auto;
