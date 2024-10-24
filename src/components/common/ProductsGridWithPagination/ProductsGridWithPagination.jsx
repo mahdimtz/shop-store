@@ -32,7 +32,7 @@ const ProductsGridWithPagination = () => {
         ))}
         
     </div>
-    {data && (<div className="my-8 flex justify-center" dir="ltr"><Pagination onChange={(e,value)=>setCurrentPage(value)}  defaultPage={currentPage} count={Math.ceil(total/limit)} size="large"/></div>)}
+    {data && (<div className="my-8 flex justify-center" dir="ltr"><Pagination onChange={(e,value)=>{ window.scrollTo({ top: 0, behavior: "smooth" }); setCurrentPage(value)}}  defaultPage={currentPage} count={Math.ceil(total/limit)} size="small"/></div>)}
     </>
   );
 };
