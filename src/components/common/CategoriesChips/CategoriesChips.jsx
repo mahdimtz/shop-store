@@ -6,6 +6,8 @@ import { getCategoriesApi } from "../../../utils/apis/categories/getCategoriesAp
 import CategoriesChipsSkeleton from "../../skeleton/CategoriesChipsSkeleton/CategoriesChipsSkeleton";
 import ErrorOnFetchApi from "../../common/ErrorOnFetchApi"
 import { Link } from "react-router-dom";
+
+
 const CategoriesChips = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ['categories'],
@@ -15,17 +17,17 @@ const CategoriesChips = () => {
   })
   
   return (
-    <div className="mx-4 flex flex-wrap gap-4 ">
+    <div className="mx-4 flex  gap-4 overflow-x-auto pb-4 ">
       {isPending && Array.from("123456").map(item =><CategoriesChipsSkeleton/>)}
       {error && <ErrorOnFetchApi/>}
     {data && 
      data?.data?.map(category =>(
        
-     <Link key={category?.id} to={`/categories/${category.id}`}>
+     <Link key={category?.id} to={`/categories/${category.id}`}  className="flex">
       <Chip 
       sx={{height:"5rem"}}
       key={category?.id}
-        avatar={<Avatar sx={{width:"4rem !important",height:"4rem !important",marginRight:"auto !important"}} alt={`${category.name} image`} src={category?.image} />}
+        avatar={<Avatar sx={{width:"4rem !important",height:"4rem !important",marginRight:"10px !important"}} alt={`${category.name} image`} src={category?.image} />}
         label={category?.name}
         variant="outlined"
       />

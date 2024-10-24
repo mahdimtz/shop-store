@@ -11,10 +11,10 @@ const Header = () => {
     <header className="px-4 my-4">
       <div className="flex justify-between items-center bg-slate-600 p-4 text-slate-50 rounded-xl shadow-md">
         <Link to="/" className="flex gap-1 items-center">
-          <span>فروشگاه انلاین</span>
+          <span>فروشگاه </span>
           <StorefrontIcon />
         </Link>
-        <Link to={`/${access_token !=null && access_token != undefined ? "dashboard":"login"}`}  className="bg-slate-500 px-4 py-2 rounded-md">
+        <Link to={`/${access_token !=null && access_token != undefined ? "dashboard":"login"}`}  className="bg-slate-500 px-4 py-2 rounded-md inline-flex gap-2 items-center justify-center">
           {" "}
           {access_token != null && access_token != undefined ? (
             <>
@@ -22,10 +22,10 @@ const Header = () => {
               <PermIdentityIcon />
             </>
           ) : (
-            <>
-              <span>ورود|ثبت نام</span>
+            <span className="flex items-center justify-center gap-2">
+              <span>ورود</span>
               <LoginIcon />
-            </>
+            </span>
           )}
         </Link>
       </div>

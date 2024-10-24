@@ -7,3 +7,17 @@
 .Toastify__toast{
     min-width: 320px;
 }
+
+/* display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5rem; */
+    img,
+video {
+  max-width: 100%;
+  height: auto;
+}

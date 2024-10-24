@@ -8,7 +8,7 @@ const Root = () => {
     <>
     <Header/>
     <CategoriesChips/>
-    <ProductsGridWithPagination/>
+ <ProductsGridWithPagination/>
     </>
   )
 }
